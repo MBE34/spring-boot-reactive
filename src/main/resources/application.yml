@@ -1,0 +1,10 @@
+spring:
+  r2dbc:
+    url: r2dbc:mysql://localhost:3390/reactive_student_db
+    username: root  # your database username
+    password:      # your db password
+
+flyway:
+  user: root
+  password:
+  url: jdbc:mysql://localhost:3390/reactive_student_db
