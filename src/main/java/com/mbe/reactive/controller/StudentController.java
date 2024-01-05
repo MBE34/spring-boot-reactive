@@ -16,12 +16,18 @@ public class StudentController {
     private StudentService studentService;
 
     @PostMapping("/save")
-    public Mono<Student> saveStudent(@RequestBody Student student){
+    public Mono<Student> saveStudent(@RequestBody Student student) {
         return studentService.saveSingleStudent(student);
     }
 
     @GetMapping("/all")
-    public Flux<Student> fetchAll(){
+    public Flux<Student> fetchAll() {
         return studentService.findAllStudents();
+    }
+
+
+    @GetMapping("/{id}")
+    public Mono<Student> findById(@PathVariable Long id) {
+        return studentService.findById(id);
     }
 }

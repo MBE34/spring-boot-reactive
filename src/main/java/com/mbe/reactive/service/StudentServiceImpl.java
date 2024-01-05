@@ -8,10 +8,9 @@ import reactor.core.publisher.Flux;
 import reactor.core.publisher.Mono;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
-public class StudentServiceImpl implements StudentService{
+public class StudentServiceImpl implements StudentService {
 
     @Autowired
     private StudentRepository studentRepository;
@@ -51,7 +50,7 @@ public class StudentServiceImpl implements StudentService{
         return studentRepository.findAll();
     }
 
-    public Flux<Student> findStudentsByFirstnameIgnoreCase(String firstName){
+    public Flux<Student> findStudentsByFirstnameIgnoreCase(String firstName) {
         return studentRepository.findStudentsByFirstNameIgnoreCase(firstName);
     }
 

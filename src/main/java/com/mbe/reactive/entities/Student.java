@@ -1,7 +1,6 @@
 package com.mbe.reactive.entities;
 
 import lombok.*;
-import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.relational.core.mapping.Column;
 import org.springframework.data.relational.core.mapping.Table;
@@ -11,7 +10,7 @@ import org.springframework.data.relational.core.mapping.Table;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-@Table(name="students")
+@Table(name = "students")
 public class Student {
 
     @Id
